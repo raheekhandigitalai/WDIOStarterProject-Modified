@@ -164,7 +164,7 @@ capabilities: [{
 
 ## Documentation
 
-To find out more about CT usage, features and best practices, visit our online documentation
+To find out more about CT usage, features and best practices, visit our online [documentation](https://docs.experitest.com/display/TE/Test+Execution+Home) 
 
 ## Support
 
