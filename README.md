@@ -50,7 +50,7 @@ The project already contains two tests of EriBank Application, you can add new t
 
 One can add custom capabilites under capabilities in **Andriod.conf.js** and **iOS.conf.js**,for more information visit: https://docs.experitest.com/display/TET/Capabilties+in+Appium+Based+Tests.
 
-- Examples:
+Examples:
 
 **Andriod.conf.js**
 ```
@@ -104,13 +104,13 @@ Parallel Execution is Achieved by:
 
 - setting up "**maxInstances**" paramater in **Andriod.conf.js** and **iOS.conf.js**,for example:
 
-**Andriod.conf.js:**
-```
-maxInstances: 3,
-```
-
-setting maxInstances to 3 will spawn maximum of 3 test for every capability defined under capabilities in **Andriod.conf.js:**,
-for more information about capabilities see below **WDIO Capabilities**.
+  **Andriod.conf.js:**
+  ```
+  maxInstances: 3,
+  ```
+  
+  setting maxInstances to 3 will spawn maximum of 3 test for every capability defined under capabilities in **Andriod.conf.js:**,
+  for more information about capabilities see below **WDIO Capabilities**.
 
 - npm-run-all package is added as developmnet dependency, it used to run iOS and Android tests in parallel. 
 
@@ -131,7 +131,7 @@ capabilities: [{
     .
     .
     .
-,
+    ,
     {
         <CONFIGURATION_n>
     }]
