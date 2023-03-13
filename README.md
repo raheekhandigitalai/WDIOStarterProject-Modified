@@ -6,7 +6,9 @@ Starter project with WebDriverIO
 
 To get started with this project, first clone the project:
 
+```
 git clone https://github.com/ExperitestOfficial/CommunityCode-Mobile-WDIOStarterProject.git
+```
 
 Run the following command to fetch all the necessary packages and dependencies:
 
