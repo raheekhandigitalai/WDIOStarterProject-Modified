@@ -162,6 +162,14 @@ capabilities: [{
     }]
 ```
 
+## Documentation
+
+To find out more about CT usage, features and best practices, visit our online documentation
+
+## Support
+
+If you've encountered an issue that is not covered here or in our online documentation, contact us at support@digital.ai
+
 
   
 
