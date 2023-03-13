@@ -35,11 +35,11 @@ Update the relevant properties in **Andriod.conf.js** and **iOS.conf.js**:
 
 ### Uploading Application
 
-To test your application, you have to upload it to continuos-testing cloud, 
+To start testing your application you have to upload it to continuos-testing cloud, 
 For full instructions on how to upload applications to continuos-testing cloud visit: https://docs.experitest.com/display/COMT/Upload+Applications.
 
-the project configured with EriBank application for Andriod and iOS, that you can found in the cloud.
-
+the project configured with EriBank application (demo application) for Andriod and iOS.
+ 
 ### Adding tests
 
 The project already contains two tests of EriBank Application, you can add new tests of your application:
@@ -80,7 +80,7 @@ capabilities: [{
 
 ### Run The Project
 
-Start running tests according to relevant option:
+Start running tests according to a relevant option:
 
 - Andriod Tests:
 
@@ -110,7 +110,7 @@ Parallel Execution is Achieved by:
   ```
   maxInstances: 3,
   ```
-  
+
   setting maxInstances to 3 will spawn maximum of 3 test for every capability defined under capabilities in **Andriod.conf.js:**,
   for more information about capabilities see below **WDIO Capabilities**.
 
@@ -120,7 +120,7 @@ Parallel Execution is Achieved by:
 ## WebDriverIo Capabilities 
 
 To run the same test based on diffrent number of configurations and properties,one have to add new element under capabilities array in
-**Andriod.conf.js** or **iOS.conf.js**
+**Andriod.conf.js** or **iOS.conf.js**.
 
 **Andriod.conf.js/iOS.conf.js**:
 ```
