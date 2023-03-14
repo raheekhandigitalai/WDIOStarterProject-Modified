@@ -31,12 +31,12 @@ Update the relevant properties in **andriod.conf.js** and **iOS.conf.js**:
 - hostname - Specify continuous-testing cloud url.
 
 - 'experitest:accessKey' - Provide your Access Key,  
-  for more infomation visit: https://docs.experitest.com/display/TET/Obtaining+Access+Key
+  for more infomation visit: https://docs.experitest.com/display/TE/Obtaining+Access+Key
 
 ### Uploading Application
 
 To start testing your application you have to upload it to continuos-testing cloud, 
-For full instructions on how to upload applications to continuos-testing cloud visit: https://docs.experitest.com/display/COMT/Upload+Applications.
+For full instructions on how to upload applications to continuos-testing cloud visit: https://docs.experitest.com/display/COM/Upload+Applications.
 
 the project configured with EriBank application (demo application) for andriod and iOS.
  
