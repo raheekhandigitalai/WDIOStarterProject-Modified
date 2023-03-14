@@ -94,7 +94,7 @@ npx run android-tests
 npx run ios-tests
 ```
 
-- Android & iOS Tests parallel execution:
+- android & iOS Tests parallel execution:
 
 ```
 npx run all-tests
@@ -114,7 +114,7 @@ Parallel Execution is Achieved by:
   setting maxInstances to 3 will spawn maximum of 3 test for every capability defined under capabilities in **Andriod.conf.js:**,
   for more information about capabilities see below **WDIO Capabilities**.
 
-- npm-run-all package is added as developmnet dependency, it used to run iOS and Android tests in parallel. 
+- npm-run-all package is added as developmnet dependency, it used to run iOS and android tests in parallel. 
 
 
 ## WebDriverIo Capabilities 

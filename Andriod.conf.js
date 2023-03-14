@@ -45,6 +45,7 @@ exports.config = {
         platformName: 'ANDROID',
         'experitest:testName': "Quick Start Android NATIVE Demo",
         'experitest:accessKey': "<ACCESS_KEY>",
+        'experitest:appiumVersion': "1.22.3",
         'appium:appPackage':  "com.experitest.ExperiBank",
         'appium:app': 'cloud:com.experitest.ExperiBank/.LoginActivity',
         'appium:deviceQuery': "@os='android' and @category='PHONE'",

@@ -46,6 +46,7 @@ exports.config = {
         platformName: 'IOS',
         'experitest:testName': "Quick Start iOS NATIVE Demo",
         'experitest:accessKey': "<ACCESS_KEY>",
+        'experitest:appiumVersion': "1.22.3",
         'appium:bundleId':  "com.experitest.ExperiBank",
         'appium:app': 'cloud:com.experitest.ExperiBank',
         'appium:deviceQuery': "@os='ios' and @category='PHONE'",
