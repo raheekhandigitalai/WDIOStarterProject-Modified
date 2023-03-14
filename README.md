@@ -111,7 +111,7 @@ Parallel Execution is Achieved by:
   maxInstances: 3,
   ```
 
-  setting maxInstances to 3 will spawn maximum of 3 test for every capability defined under capabilities in **Andriod.conf.js:**,
+  setting maxInstances to 3 will spawn maximum of 3 test for every capability defined under capabilities in **andriod.conf.js:**,
   for more information about capabilities see below **WDIO Capabilities**.
 
 - npm-run-all package is added as developmnet dependency, it used to run iOS and android tests in parallel. 
