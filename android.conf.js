@@ -18,7 +18,7 @@ exports.config = {
     // from which `wdio` was called.
     //
     specs: [
-        './test/specs/andriod-specs/*.js'
+        './test/specs/android-specs/*.js'
     ],
     //
     // ============
