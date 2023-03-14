@@ -119,7 +119,7 @@ Parallel Execution is Achieved by:
 
 ## WebDriverIo Capabilities 
 
-To run the same test based on diffrent number of configurations and properties,one have to add new element under capabilities array in
+To run the same test based on diffrent number of configurations and properties, one have to add new element under capabilities array in
 **andriod.conf.js** or **iOS.conf.js**.
 
 **andriod.conf.js/iOS.conf.js**:
