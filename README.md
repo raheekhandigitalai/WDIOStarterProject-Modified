@@ -18,15 +18,15 @@ npm install
 
 ### Configuration Files
 
-The project contains two configuration files **Andriod.conf.js** and **iOS.conf.js**.
+The project contains two configuration files **andriod.conf.js** and **iOS.conf.js**.
 
-- **Andriod.conf.js** contains all Android tests related configurations.
+- **andriod.conf.js** contains all android tests related configurations.
 
 - **iOS.conf.js** contains all iOS tests related configurations.
 
 ### Setting Up Continuous-Testing Cloud Url And Authentication
 
-Update the relevant properties in **Andriod.conf.js** and **iOS.conf.js**:
+Update the relevant properties in **andriod.conf.js** and **iOS.conf.js**:
 
 - hostname - Specify continuous-testing cloud url.
 
@@ -38,7 +38,7 @@ Update the relevant properties in **Andriod.conf.js** and **iOS.conf.js**:
 To start testing your application you have to upload it to continuos-testing cloud, 
 For full instructions on how to upload applications to continuos-testing cloud visit: https://docs.experitest.com/display/COMT/Upload+Applications.
 
-the project configured with EriBank application (demo application) for Andriod and iOS.
+the project configured with EriBank application (demo application) for andriod and iOS.
  
 ### Adding tests
 
@@ -50,11 +50,11 @@ The project already contains two tests of EriBank Application, you can add new t
 
 ### Configuring Test Capabilities
 
-One can add custom capabilites under capabilities in **Andriod.conf.js** and **iOS.conf.js**,for more information visit: https://docs.experitest.com/display/TET/Capabilties+in+Appium+Based+Tests.
+One can add custom capabilites under capabilities in **andriod.conf.js** and **iOS.conf.js**,for more information visit: https://docs.experitest.com/display/TET/Capabilties+in+Appium+Based+Tests.
 
 Examples:
 
-**Andriod.conf.js**
+**andriod.conf.js**
 ```
 capabilities: [{
     platformName: 'ANDROID',
@@ -82,7 +82,7 @@ capabilities: [{
 
 Start running tests according to a relevant option:
 
-- Andriod Tests:
+- andriod Tests:
 
 ```
 npx run android-tests
@@ -104,9 +104,9 @@ npx run all-tests
 
 Parallel Execution is Achieved by:
 
-- setting up "**maxInstances**" paramater in **Andriod.conf.js** and **iOS.conf.js**,for example:
+- setting up "**maxInstances**" paramater in **andriod.conf.js** and **iOS.conf.js**,for example:
 
-  **Andriod.conf.js:**
+  **andriod.conf.js:**
   ```
   maxInstances: 3,
   ```
@@ -120,9 +120,9 @@ Parallel Execution is Achieved by:
 ## WebDriverIo Capabilities 
 
 To run the same test based on diffrent number of configurations and properties,one have to add new element under capabilities array in
-**Andriod.conf.js** or **iOS.conf.js**.
+**andriod.conf.js** or **iOS.conf.js**.
 
-**Andriod.conf.js/iOS.conf.js**:
+**andriod.conf.js/iOS.conf.js**:
 ```
 capabilities: [{
         <CONFIGURATION_1>
