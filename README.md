@@ -85,13 +85,13 @@ Start running tests according to a relevant option:
 - android Tests:
 
 ```
-npx run android-tests
+npm run android-tests
 ```
 
 - iOS Tests:
 
 ```
-npx run ios-tests
+npm run ios-tests
 ```
 
 - android & iOS Tests parallel execution:
