@@ -85,19 +85,27 @@ Start running tests according to a relevant option:
 - android Tests:
 
 ```
-npx run android-tests
+npm run android-tests
+```
+or:
+```
+npx run android.conf.js
 ```
 
 - iOS Tests:
 
 ```
-npx run ios-tests
+npm run ios-tests
+```
+or:
+```
+npx run iOS.conf.js
 ```
 
 - android & iOS Tests parallel execution:
 
 ```
-npx run all-tests
+npm run all-tests
 ```
 
 ### Parallel Execution
