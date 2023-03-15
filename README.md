@@ -97,7 +97,7 @@ npm run ios-tests
 - android & iOS Tests parallel execution:
 
 ```
-npx run all-tests
+npm run all-tests
 ```
 
 ### Parallel Execution
