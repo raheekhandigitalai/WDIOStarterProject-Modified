@@ -5,7 +5,7 @@ This project demonstrates how to use Continuous Cloud with WebDriverIO.
 ### Clone Starter Project
 
 To get started with this project:
-1. Clone the project.
+1. Clone the project.  
 
     ```
     git clone https://github.com/ExperitestOfficial/CommunityCode-Mobile-WDIOStarterProject.git
