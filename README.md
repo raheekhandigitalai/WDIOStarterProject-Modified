@@ -1,5 +1,5 @@
 # CommunityCode Mobile WebDriver IO Starter Project
-This project demonstrates how to use Continuous Cloud with WebDriverIO.
+This project demonstrates how to use Continuous Cloud Testing with WebDriverIO.
 
 ## Run The Project
 ### Clone Starter Project
@@ -50,7 +50,7 @@ The project already contains two tests for the EriBank Application. You can add 
 
 ### Configuring Test Capabilities
 
-You can add custom capabilities under capabilities in **android.conf.js** and **iOS.conf.js**. For more information see https://docs.experitest.com/display/TET/Capabilties+in+Appium+Based+Tests.
+You can add custom capabilities under capabilities in **android.conf.js** and **iOS.conf.js**. For more information see https://docs.experitest.com/display/TE/Capabilties+in+Appium+Based+Tests.
 
 Examples:
 
@@ -87,7 +87,7 @@ Android Tests:
 ```
 npm run android-tests
 ```
-Or:
+or:
 ```
 npx run android.conf.js
 ```
@@ -102,7 +102,7 @@ or:
 npx run iOS.conf.js
 ```
 
-- Android & iOS Tests Parallel Execution:
+Android & iOS Tests Parallel Execution:
 
 ```
 npm run all-tests
@@ -119,7 +119,7 @@ To enable Parallel Execution, set the "**maxInstances**" parameter in **android.
 
   In this example, a maximum of 3 tests are spawned for every capability defined under capabilities in **android.conf.js:**. For more information about capabilities see  <a href="#WebDriverIo Capabilities"> WebDriverIo Capabilities</a>.
 
-npm-run-all package is added as a development dependency. It used to run iOS and Android tests in parallel. 
+npm-run-all package is added as a development dependency. It is used to run iOS and Android tests in parallel. 
 
 
 ## WebDriverIo Capabilities 
