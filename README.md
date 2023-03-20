@@ -89,7 +89,7 @@ npm run android-tests
 ```
 or:
 ```
-npx run android.conf.js
+npx wdio run android.conf.js
 ```
 
 iOS Tests:
@@ -99,7 +99,7 @@ npm run ios-tests
 ```
 or:
 ```
-npx run iOS.conf.js
+npx wdio run iOS.conf.js
 ```
 
 Android & iOS Tests Parallel Execution:
