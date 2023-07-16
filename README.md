@@ -31,7 +31,7 @@ The project contains these configuration files:
 
 ### Setting Up Continuous Testing Cloud Url And Authentication
 
-To set up continuous testing, update the relevant properties in **android_native.conf.js**, **iOS_native.conf.js**, **android_web.conf.js**, and **iOS_web.conf.js**:
+To set up continuous testing, update the relevant properties in the conf files:
 
 - hostname - Continuous Testing Cloud url.
 
@@ -54,7 +54,7 @@ The project already contains two tests for the EriBank Application. You can add 
 
 ### Configuring Test Capabilities
 
-You can add custom capabilities under capabilities in the relevant conf file **android_native.conf.js**, **iOS_native.conf.js**, **android_web.conf.js**, or **iOS_web.conf.js**.
+You can add custom capabilities under capabilities in the relevant conf file.
 For more information see https://docs.experitest.com/display/TE/Capabilties+in+Appium+Based+Tests.
 
 Examples:
@@ -136,7 +136,7 @@ npm run all-tests
 
 ### Parallel Execution
 
-To enable Parallel Execution, set the "**maxInstances**" parameter in **android_native.conf.js**, **iOS_native.conf.js**, **android_web.conf.js**, and **iOS_web.conf.js** to a value higher than one. For example:
+To enable Parallel Execution, set the "**maxInstances**" parameter in one of the conf files to a value higher than one. For example:
 
   **android.conf.js:**
   ```
@@ -150,10 +150,8 @@ npm-run-all package is added as a development dependency. It is used to run iOS 
 
 ## WebDriverIo Capabilities 
 
-To run the same test based on different number of configurations and properties, add new elements under the capabilities array in one of
-**android_native.conf.js**, **iOS_native.conf.js**, **android_web.conf.js** or **iOS_web.conf.js**.
+To run the same test based on different number of configurations and properties, add new elements under the capabilities array in one of the conf files.
 
-**android_native.conf.js/iOS_native.conf.js/android_web.conf.js/iOS_web.conf.js**:
 ```
 capabilities: [{
         <CONFIGURATION_1>

@@ -39,7 +39,7 @@ exports.config = {
     maxInstances: 10,
     //
     //  For more Capabilitites go to:
-    //  https://docs.experitest.com/display/TET/Webdriver.io+Starter+Code
+    //  https://docs.experitest.com/display/TE/Webdriver.io+Starter+Code
 
     capabilities: [{
         platformName: 'IOS',
