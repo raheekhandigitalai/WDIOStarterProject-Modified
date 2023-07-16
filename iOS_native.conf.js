@@ -18,7 +18,7 @@ exports.config = {
     // from which `wdio` was called.
     //
     specs: [
-        './test/specs/ios-specs/*.js'
+        './test/specs/ios-specs/ios_native_demo_test.js'
     ],
     //
     // ============

@@ -12,8 +12,10 @@
         "wdio-chromedriver-service": "^8.1.1"
     },
     "scripts": {
-        "android-tests": "wdio run android.conf.js",
-        "ios-tests": "wdio run iOS.conf.js",
-        "all-tests": "npm-run-all --parallel android-tests ios-tests"
+        "android-native-tests": "wdio run android_native.conf.js",
+        "ios-native-tests": "wdio run iOS_native.conf.js",
+        "android-web-tests": "wdio run android_web.conf.js",
+        "ios-web-tests": "wdio run iOS_web.conf.js",
+        "all-tests": "npm-run-all --parallel android-native-tests ios-native-tests android-web-tests ios-web-tests"
     }
 }

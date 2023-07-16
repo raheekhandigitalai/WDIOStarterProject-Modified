@@ -18,7 +18,7 @@ exports.config = {
     // from which `wdio` was called.
     //
     specs: [
-        './test/specs/android-specs/*.js'
+        './test/specs/device_web_demo_test.js'
     ],
     //
     // ============
@@ -40,17 +40,17 @@ exports.config = {
     //
     //  For more Capabilitites go to:
     //  https://docs.experitest.com/display/TET/Webdriver.io+Starter+Code
-    //
+
     capabilities: [{
         platformName: 'ANDROID',
-        'experitest:testName': "Quick Start Android NATIVE Demo",
+        'experitest:testName': "Quick Start Android WEB Demo",
         'experitest:accessKey': "<ACCESS_KEY>",
         'experitest:appiumVersion': "1.22.3",
-        'appium:appPackage':  "com.experitest.ExperiBank",
-        'appium:app': 'cloud:com.experitest.ExperiBank/.LoginActivity',
+        browserName: 'chrome',
         'appium:deviceQuery': "@os='android' and @category='PHONE'",
         strictSSL: false
-    }],
+    },
+    ],
 
     acceptSslCerts: true,
 
@@ -78,7 +78,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    //services: ['chromedriver'],
+    // services: ['chromedriver'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
