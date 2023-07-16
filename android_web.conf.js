@@ -18,7 +18,7 @@ exports.config = {
     // from which `wdio` was called.
     //
     specs: [
-        './test/specs/ios-specs/*.js'
+        './test/specs/device_web_demo_test.js'
     ],
     //
     // ============
@@ -39,19 +39,18 @@ exports.config = {
     maxInstances: 10,
     //
     //  For more Capabilitites go to:
-    //  https://docs.experitest.com/display/TET/Webdriver.io+Starter+Code
-    //
+    //  https://docs.experitest.com/display/TE/Webdriver.io+Starter+Code
+
     capabilities: [{
-    
-        platformName: 'IOS',
-        'experitest:testName': "Quick Start iOS NATIVE Demo",
+        platformName: 'ANDROID',
+        'experitest:testName': "Quick Start Android WEB Demo",
         'experitest:accessKey': "<ACCESS_KEY>",
         'experitest:appiumVersion': "1.22.3",
-        'appium:bundleId':  "com.experitest.ExperiBank",
-        'appium:app': 'cloud:com.experitest.ExperiBank',
-        'appium:deviceQuery': "@os='ios' and @category='PHONE'",
+        browserName: 'chrome',
+        'appium:deviceQuery': "@os='android' and @category='PHONE'",
         strictSSL: false
-    }],
+    },
+    ],
 
     acceptSslCerts: true,
 
@@ -79,7 +78,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    //services: ['chromedriver'],
+    // services: ['chromedriver'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -103,6 +102,8 @@ exports.config = {
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: ['spec'],
 
+
+    
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
