@@ -24,4 +24,6 @@ describe('LocaliOSTest', () => {
    await sendPaymentButton.click();
    const yesButton = await $("//*[@name='Yes']");
    await yesButton.click();
+   const reportUrl = browser.capabilities.reportUrl;
+   console.log("Report URL: " + reportUrl);
  }
