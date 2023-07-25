@@ -24,6 +24,4 @@ describe('LocalAndroidTest', () => {
    await sendPaymentButton.click();
    const yesButton = await $("android:id/button1");
    await yesButton.click();
-   const reportUrl = browser.capabilities.reportUrl;
-   console.log("Report URL: " + reportUrl);
  }

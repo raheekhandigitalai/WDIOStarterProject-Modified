@@ -21,7 +21,5 @@ describe('LocalDeviceTest', () => {
         await country.click();
         const transferButton = await $("//*[@data-auto='transfer-button']");
         await transferButton.click();
-        const reportUrl = browser.capabilities.reportUrl;
-        console.log("Report URL: " + reportUrl);
     })
 })
