@@ -110,5 +110,10 @@ exports.config = {
     mochaOpts: {
         ui: 'bdd',
         timeout: 180000
-    }
+    },
+
+     afterTest: function (test, context, { error, result, duration, passed, retries }) {
+         const reportUrl = browser.capabilities.reportUrl;
+         console.log("Report URL: " + reportUrl);
+     }
 }
