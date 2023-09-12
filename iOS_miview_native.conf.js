@@ -20,7 +20,7 @@ exports.config = {
     // from which `wdio` was called.
     //
     specs: [
-        './test/specs/device_web_demo_test.js'
+        './test/specs/ios-specs/ios_miview_native_demo_test.js'
     ],
     //
     // ============
@@ -42,17 +42,19 @@ exports.config = {
     //
     //  For more Capabilitites go to:
     //  https://docs.experitest.com/display/TE/Webdriver.io+Starter+Code
-
+    //
     capabilities: [{
-        platformName: 'ANDROID',
-        'experitest:testName': "Quick Start Android WEB Demo",
+    
+        platformName: 'IOS',
+        'experitest:testName': "miview_native_app_tests",
         'experitest:accessKey': properties.accessKey,
         'experitest:appiumVersion': "1.22.3",
-        browserName: 'chrome',
-        'appium:deviceQuery': "@os='android' and @category='PHONE' and contains(@name, 'S22')",
+        'appium:bundleId':  "com.miviewis.mitrade",
+        'appium:app': 'cloud:com.miviewis.mitrade',
+        'appium:deviceQuery': "@os='ios'",
+        'appium:autoAcceptAlerts': true,
         strictSSL: false
-    },
-    ],
+    }],
 
     acceptSslCerts: true,
 
@@ -67,7 +69,7 @@ exports.config = {
     //
     // Default timeout for all waitFor* commands.
     //
-    waitforTimeout: 10000,
+    waitforTimeout: 15000,
     //
     // Default timeout in milliseconds for request
     // if browser driver or grid doesn't send response
@@ -80,7 +82,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    // services: ['chromedriver'],
+    //services: ['chromedriver'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -104,8 +106,6 @@ exports.config = {
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: ['spec'],
 
-
-    
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
@@ -114,8 +114,18 @@ exports.config = {
         timeout: 180000
     },
 
-    afterTest: function (test, context, { error, result, duration, passed, retries }) {
-        const reportUrl = browser.capabilities.reportUrl;
-        console.log("Report URL: " + reportUrl);
+     afterTest: async function (test, context, { error, result, duration, passed, retries }) {
+
+         const testStatus = passed ? "passed" : "failed";
+         const errorMessage = passed ? "test passed" : (error ? error.message : "Unknown error");
+         const stackTrace = passed ? "test passed" : (error ? error.stack : "No stack trace available");
+
+         const seetestCommand = "seetest:client.setReportStatus";
+         const scriptArguments = [testStatus, errorMessage, stackTrace];
+
+         await browser.executeScript(seetestCommand, scriptArguments);
+
+         const reportUrl = browser.capabilities.reportUrl;
+         console.log("Report URL: " + reportUrl);
      }
 }

@@ -1,3 +1,5 @@
+const properties = require('./properties');
+
 exports.config = {
     //
     // ====================
@@ -5,7 +7,7 @@ exports.config = {
     // ====================
     //
     // continuos testing cloud:
-    hostname: '<CLOUD_URL>',
+    hostname: 'uscloud.experitest.com',
     protocol: 'https',
     port: 443,
     path: '/wd/hub',
@@ -43,12 +45,12 @@ exports.config = {
     //
     capabilities: [{
         platformName: 'ANDROID',
-        'experitest:testName': "Quick Start Android NATIVE Demo",
-        'experitest:accessKey': "<ACCESS_KEY>",
+        'experitest:testName': "WDIO Android Native",
+        'experitest:accessKey': properties.accessKey,
         'experitest:appiumVersion': "1.22.3",
         'appium:appPackage':  "com.experitest.ExperiBank",
         'appium:app': 'cloud:com.experitest.ExperiBank/.LoginActivity',
-        'appium:deviceQuery': "@os='android' and @category='PHONE'",
+        'appium:deviceQuery': "@os='android' and @category='PHONE' and contains(@name, 'S22')",
         strictSSL: false
     }],
 

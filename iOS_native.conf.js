@@ -1,3 +1,5 @@
+const properties = require('./properties');
+
 exports.config = {
     //
     // ====================
@@ -5,7 +7,7 @@ exports.config = {
     // ====================
     //
     // continuos testing cloud:
-    hostname: '<CLOUD_URL>',
+    hostname: 'uscloud.experitest.com',
     protocol: 'https',
     port: 443,
     path: '/wd/hub',
@@ -45,7 +47,7 @@ exports.config = {
     
         platformName: 'IOS',
         'experitest:testName': "Quick Start iOS NATIVE Demo",
-        'experitest:accessKey': "<ACCESS_KEY>",
+        'experitest:accessKey': properties.accessKey,
         'experitest:appiumVersion': "1.22.3",
         'appium:bundleId':  "com.experitest.ExperiBank",
         'appium:app': 'cloud:com.experitest.ExperiBank',

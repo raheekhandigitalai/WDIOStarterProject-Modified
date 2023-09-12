@@ -20,7 +20,8 @@ exports.config = {
     // from which `wdio` was called.
     //
     specs: [
-        './test/specs/device_web_demo_test.js'
+        './test/specs/web_miview_login_page_test.js'
+        // './test/specs/device_web_demo_test.js'
     ],
     //
     // ============
@@ -44,14 +45,12 @@ exports.config = {
     //  https://docs.experitest.com/display/TE/Webdriver.io+Starter+Code
 
     capabilities: [{
-        platformName: 'ANDROID',
-        'experitest:testName': "Quick Start Android WEB Demo",
+        platformName: 'Windows',
+        'experitest:testName': "Login Test Scenarios",
         'experitest:accessKey': properties.accessKey,
-        'experitest:appiumVersion': "1.22.3",
         browserName: 'chrome',
-        'appium:deviceQuery': "@os='android' and @category='PHONE' and contains(@name, 'S22')",
         strictSSL: false
-    },
+    }
     ],
 
     acceptSslCerts: true,
@@ -80,7 +79,7 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    // services: ['chromedriver'],
+//    services: ['chromedriver'],
     
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
@@ -114,8 +113,19 @@ exports.config = {
         timeout: 180000
     },
 
-    afterTest: function (test, context, { error, result, duration, passed, retries }) {
-        const reportUrl = browser.capabilities.reportUrl;
+     afterTest: async function (test, context, { error, result, duration, passed, retries }) {
+
+        const testStatus = passed ? "true" : "false";
+        const errorMessage = passed ? null : (error ? error.message : "Unknown error");
+        const stackTrace = passed ? null : (error ? error.stack : "No stack trace available");
+
+        // const seetestCommand = `seetest:client.setReportStatus("${testStatus}", "${errorMessage}", "${stackTrace}")`;
+         const seetestCommand = "seetest:client.setReportStatus";
+         const scriptArguments = [testStatus, errorMessage, stackTrace];
+
+         await browser.executeScript(seetestCommand, scriptArguments);
+
+        const reportUrl = await browser.capabilities.reportUrl;
         console.log("Report URL: " + reportUrl);
      }
 }
