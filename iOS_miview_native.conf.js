@@ -50,7 +50,7 @@ exports.config = {
         'experitest:accessKey': properties.accessKey,
         'experitest:appiumVersion': "1.22.3",
         'appium:bundleId':  "com.miviewis.mitrade",
-        'appium:app': 'cloud:com.miviewis.mitrade',
+        // 'appium:app': 'cloud:com.miviewis.mitrade',
         'appium:deviceQuery': "@os='ios'",
         'appium:autoAcceptAlerts': true,
         strictSSL: false

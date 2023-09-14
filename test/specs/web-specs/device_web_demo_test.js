@@ -1,6 +1,7 @@
 describe('LocalDeviceTest', () => {
     it('quickStartDeviceWebDemo', async () => {
         await browser.url('https://demo-bank.ct.digital.ai/login')
+        // wait logic for
         const username = await $('//*[@data-auto="username"]//input');
         await username.setValue('company');
         const password = await $('//*[@data-auto="password"]//input');
