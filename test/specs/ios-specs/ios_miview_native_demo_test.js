@@ -4,8 +4,8 @@ describe('miview_native_app', () => {
     it('miview_native_app_tests', myTest)
  })
  async function myTest() {
-    const locationPopup = await $("//*[@name='Allow While Using App']");
-    await locationPopup.click();
+    // const locationPopup = await $("//*[@name='Allow While Using App']");
+    // await locationPopup.click();
     const username = await $("//*[@name='username-input']");
     await username.setValue('rahee_test');
     const password = await $("//*[@name='password-input']");
