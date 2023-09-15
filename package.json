@@ -19,7 +19,10 @@
         "android-web-tests": "wdio run android_web.conf.js",
         "ios-web-tests": "wdio run iOS_web.conf.js",
         "chrome-web-tests": "wdio run chrome_web.conf.js",
-        "all-tests": "npm-run-all --parallel android-native-tests ios-native-tests android-web-tests ios-web-tests",
-        "mobile-and-web": "npm-run-all --parallel chrome_web.conf.js iOS_miview_native.conf.js"
+        "fileupload-web-tests": "wdio run fileupload_web.conf.js",
+        "all-tests": "npm-run-all --parallel android-native-tests ios-native-tests android-web-tests ios-web-tests"
+    },
+    "dependencies": {
+        "path": "^0.12.7"
     }
 }
