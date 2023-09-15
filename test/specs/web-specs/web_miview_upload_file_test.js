@@ -7,9 +7,9 @@ describe('LocalDeviceTest', () => {
     it('quickStartDeviceWebDemo', async () => {
         await browser.url('https://qa-web.miviewis.com')
         const username = await $("//input[@placeholder='Username']");
-        await username.setValue('raheesuper@digital.ai');
+        await username.setValue('<INSERT_USERNAME>');
         const password = await $("//input[@placeholder='Password']");
-        await password.setValue('Demo123$');
+        await password.setValue('<INSERT_PASSWORD>');
         const loginButton = await $("//button[@id='LoginButton']");
         await loginButton.click();
 
